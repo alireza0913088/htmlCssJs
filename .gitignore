@@ -1,0 +1,5 @@
+/node_modules
+/package-lock.json
+/package.json
+/ReadMe.txt
+/tailwind.config.js

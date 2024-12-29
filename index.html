@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/output.css">
+    <title>آوات صنعت کیان | طراحی و تولید سیستم های هوشمند</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <svg class="hidden">
+        <symbol id="eart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
+        </symbol>
+
+        <symbol id="email" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
+        </symbol>
+
+        <symbol id="location" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+        </symbol>
+
+        <symbol id="arrow-l" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+        </symbol>
+        <symbol id="arrow-r" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </symbol>
+        <symbol id="menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </symbol>
+        <symbol id="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </symbol>
+        <symbol id="phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+        </symbol>
+
+
+
+    </svg>
+    <header class="FirstBaner group fixed top-0 left-0 z-0 w-full">
+        <div class="backCover contentHeader">
+            <!-- left Button -->
+
+            <button class="  swiper-button-next-costum arrowButton  active:translate-x-1 "><svg class="w-8 h-8 ">
+                    <use href="#arrow-r"></use>
+                </svg></button>
+            <!-- Title Company -->
+            <section class="text-center">
+                <h1 class="font-py-bold text-3xl sm:text-5xl lg:text-6xl text-gray-50 animateUp px-2">شرکت فنی و مهندسی
+                    <span class="text-blue">آوات صنعت کیان</span>
+                </h1>
+                <p class="font-py-md text-gray-50 mt-2 text-lg sm:text-xl animateUpDelay">طراحی و تولید سیستم های هوشمند
+                </p>
+            </section>
+            <!-- right Button -->
+            <button class=" swiper-button-prev-costum arrowButton  active:-translate-x-1"><svg class="w-8 h-8 ">
+                    <use href="#arrow-l"></use>
+                </svg></button>
+            <!-- button for mobile -->
+            <div class="flex sm:hidden justify-between items-center mt-5 w-full px-10">
+
+                <button
+                    class="  swiper-button-next-costum flex group-hover:opacity-100 opacity-0 text-white border-2 border-white rounded-full p-1.5  justify-center items-center bg-blure transition-all active:translate-x-1 "><svg
+                        class="w-8 h-8 ">
+                        <use href="#arrow-r"></use>
+                    </svg></button>
+
+
+                <button
+                    class=" swiper-button-prev-costum flex group-hover:opacity-100 opacity-0 text-white border-2 border-white rounded-full p-1.5  justify-center items-center bg-blure transition-all active:-translate-x-1"><svg
+                        class="w-8 h-8 ">
+                        <use href="#arrow-l"></use>
+                    </svg></button>
+            </div>
+        </div>
+        <!-- Created a simple banner by background-image -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-banner h-screen w-full bg-no-repeat bg-cover backgroundxyCenter"></div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-banner2 h-screen w-full bg-no-repeat bg-cover backgroundxyCenter"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="h-screen"></div>
+    <main id="homeSection" class=" relative z-[1] bg-white ">
+
+        <section class="topBar  w-full h-[60px] bg-blue/80 backdrop-blur-2xl  sticky top-0 transition-all z-[5]">
+            <!-- Nav bar or menu for desktop -->
+            <div class="container flex justify-between items-center h-full">
+                <aside class="h-full ">
+                    <ul
+                        class=" hidden md:flex  items-center  font-dana-md text-gray-50 [&>li]:h-full [&>li]:flex [&>li]:justify-center [&>li]:items-center h-full [&>li]:px-4">
+                        <li><a class="simpleHover " href="#homeSection">
+                                صفحه اصلی</a></li>
+                        <span class="block w-px h-[70%] bg-gray-50/70 "></span>
+                        <li><a class="simpleHover" href="#projectSection">پروژه های انجام شده</a></li>
+                        <li><a class="simpleHover" href="#serviseSection">خدمات</a></li>
+                        <li><a class="simpleHover" href="#aboutSection">درباره ما</a></li>
+                        <li><a class="simpleHover" href="#contactSection">ارتباط با ما</a></li>
+                    </ul>
+                    <!-- menu icon for mobile -->
+                    <div id="menuBtnOpen" class="md:hidden h-full flex items-center ">
+                        <svg class="w-8  h-8 text-gray-50 active:translate-y-0.5 transition-all active:text-gray-200">
+                            <use href="#menu"></use>
+                        </svg>
+                    </div>
+                </aside>
+                <!--Logo  -->
+                <asidei class="flex items-center gap-x-1 text-gray-50 font-dana-md ">آوات صنعت <img class="w-14 md:w-16"
+                        src="./images/Logo.png" alt="">
+                </asidei>
+            </div>
+        </section>
+
+
+        <!-- aside bar for mobile -->
+        <aside id="sideBarMobile"
+            class="fixed top-0 right-0 w-[250px] h-screen bg-gray-50 z-50 font-dana-md closedMenu transition-all">
+            <!-- Header side bar -->
+            <div class="header px-3 flex justify-between items-center bg-blue text-gray-50">
+                <aside>
+                    <svg id="menuBtnClose" class="w-7 h-7 ">
+                        <use href="#close"></use>
+                    </svg>
+                </aside>
+                <aside class="flex items-center gap-x-1">
+                    <h1>آوات صنعت</h1><img class="w-14" src="./images/Logo.png" alt="">
+                </aside>
+            </div>
+            <!-- Body side bar -->
+            <div>
+                <ul id="ulMobile" class="px-3 [&>li]:py-3 text-gray-600 ">
+                    <li><a class="text-blue " href="#homeSection">
+                            صفحه اصلی</a></li>
+                    <span class="block h-px w-[100%] bg-gray-900/30"></span>
+                    <li><a class="active:text-blue transition-all" href="#projectSection">پروژه های انجام شده</a></li>
+                    <li><a class="active:text-blue transition-all" href="#serviseSection">خدمات</a></li>
+                    <li><a class="active:text-blue transition-all" href="#aboutSection">درباره ما</a></li>
+                    <li><a class="active:text-blue transition-all" href="#contactSection">ارتباط با ما</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div id="backCoverBlur" class=" hidden fixed top-0 right-0 w-full h-screen bg-black/50 backdrop-blur-lg z-[25]">
+        </div>
+        <!-----Servis Boxses------>
+        <h1 id="serviseSection" class="scrollEffBottom title ">خدمات شرکت</h1>
+        <section class="container mt-10 sm:mt-20">
+            <div class="flex flex-wrap items-center justify-evenly gap-y-10">
+                <!-- ____________First Box___________ -->
+                <div
+                    class="text-center w-[320px] md:min-h-[370px] border shadow scrollEffBottomByDelay1 bg-blue/30 p-3 rounded-2xl">
+                    <div class="flex justify-center">
+                        <img class="w-[120px]  rounded-lg" src="./images/Ai.jpg" alt="">
+                    </div>
+                    <h2 class="font-py-md mt-4 text-xl text-gray-800">هوشمندسازی تجهیزات صنعتی و شهربازی</h2>
+
+                    <p class="text-sm font-dana-md mt-3 text-gray-700">کنترل هوشمند تجهیزات با استفاده از هوش مصنوعی جهت
+                        کاهش اتکا به نیروی انسانی، کنترل بهینه تجهیزات، کاهش خرابی و ثبت و آنالیز آنلاین اطلاعات</p>
+                </div>
+                <!-- ____________Second Box__________________ -->
+                <div
+                    class="text-center w-[320px] md:min-h-[370px] border shadow scrollEffBottomByDelay2 bg-blue/30 p-3 rounded-2xl">
+                    <div class="flex justify-center">
+                        <img class="w-[120px]  rounded-lg" src="./images/car.jpg" alt="">
+                    </div>
+                    <h2 class="font-py-md mt-4 text-xl">سیستم های تردد هوشمند</h2>
+
+                    <p class="text-sm font-dana-md mt-3 text-gray-700"><span>سیستم کنترل تردد</span> مجموعه‌ای از
+                        تجهیزات سخت‌افزاری و نرم‌افزاری است که ورود و دسترسی افراد مختلف را به یک ساختمان یا محوطه کنترل
+                        و مدیریت می‌کند. به بیان ساده‌تر، سیستم کنترل تردد تعیین می‌کند که چه افرادی و در چه زمان‌هایی
+                        می‌توانند به منطقه یا منبع خاص دسترسی داشته باشند. موارد استفاده شامل: پارکینگ ها" ادارات و
+                        مجتمع های مسکونی می باشد.</p>
+                </div>
+
+                <!-- ___________Third Box___________________ -->
+                <div
+                    class="text-center w-[320px] md:min-h-[370px] border shadow scrollEffBottomByDelay3 bg-blue/30 p-3 rounded-2xl">
+                    <div class="flex justify-center">
+                        <img class="w-[120px]  rounded-lg" src="./images/card.jpg" alt="">
+                    </div>
+                    <h2 class="font-py-md mt-4 text-xl">سیستم های فروش اعتباری با استفاده از کارت های RFID</h2>
+
+                    <p class="text-sm font-dana-md mt-3 text-gray-700">کنترل هوشمند تجهیزات با استفاده از هوش مصنوعی جهت
+                        کاهش اتکا به نیروی انسانی، کنترل بهینه تجهیزات، کاهش خرابی و ثبت و آنالیز آنلاین اطلاعات</p>
+                </div>
+            </div>
+        </section>
+        <!-- About us Section -->
+        <section id="aboutSection" class="container  mt-10 sm:mt-20 flex justify-center ">
+            <div
+                class="flex flex-col lg:flex-row gap-5 items-center justify-center bg-blue/30 p-3 sm:p-5 rounded-2xl  w-full  ">
+                <!-- Image of about section -->
+                <aside class="scrollEffBottomByDelay1">
+                    <img class="lg:max-w-[550px] rounded-2xl" src="./images/aboutUs.jpg" alt="">
+                </aside>
+                <!-- Content of about secton-->
+                <aside class="scrollEffBottomByDelay3  mt-5 md:mt-0">
+                    <div class="flex items-center gap-x-3">
+
+                        <h3 class="title text-right  mt-0 ">درباره ما</h3>
+                        <span class="w-[50%] sm:w-[70%] h-px bg-gray-700/40 block"></span>
+                    </div>
+                    <p class="  font-dana-md text-gray-700 text-lg">تیم فنی شرکت آوات صنعت، از سال 97 با
+                        اتکا بر دانش بومی و متخصصین جوان، اقدام به طراحی و ساخت
+                        تجهیزات مورد نیاز جهت بهینه سازی فرآیندهای صنعتی و خانگی نموده است.
+                        تیم های فنی این شرکت ، به صورت تخصصی اقدام به طراحی سخت افزار و نرم افزار، جهت رفع نیاز مشتری
+                        نموده است.</p>
+                </aside>
+            </div>
+        </section>
+
+
+        <!-- Runed projects section -->
+        <div class="container mt-20 sm:mt-32 mb-10 scrollEffBottomByDelay3 ">
+            <!-- Here is arrow buttons of slider -->
+
+            <h3 id="projectSection" class="title text-2xl text-gray-700  mt-0 ">پروژه های اجرا شده در شرکت آوات صنعت
+            </h3>
+            <span class="w-[70%] h-px bg-gray-500/40 block my-3 mx-auto"></span>
+            <p class="text-center  font-dana-md text-gray-600 md:text-lg text-md">
+                هوشمندسازی چندین شهربازی، طراحی بردهای کنترلی، پشتیبانی سخت افزار در شهرداری خمینی شهر و ...
+            </p>
+
+        </div>
+        <section class="container   sm:rounded-lg 2xl:rounded-none">
+
+            <div class="w-full flex justify-center ">
+                <!-- slider of Runed projects section -->
+                <div class="swiper mySwiper2 w-full md:w-auto lg:max-w-[550px] noMargin text-center ">
+
+                    <div
+                        class="absolute text-gray-100 flex justify-between items-center w-[95%] h-full right-0 left-0 mx-auto  z-[5] ">
+                        <div class="swiper-button-prev-costum2 bg-black/20 rounded-full">
+                            <svg class="w-8 h-8 m-2">
+                                <use href="#arrow-r"></use>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next-costum2 bg-black/20 rounded-full">
+                            <svg class="w-8 h-8 m-2">
+                                <use href="#arrow-l"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="slider" class="swiper-wrapper  ">
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <p class="hidden">
+                                طراحی بردهای کنترلی شهربازی ناژوان
+                                و
+                                طراحی بردهای کنترلی شهربازی آبشار
+                            </p>
+                            <img class="w-full mx-auto " src="./images/aboutUs.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <p class="hidden">پشتیبانی سیستم کارت بلیط اتوبس رانی خمینی شهر / پشتیبانی سخط افزار و شبکه
+                                شهرداری خمینی شهر / پیاده سازی سامانه رزرو خدمات رفاهی شهرداری خمینی شهر</p>
+                            <img class=" w-full mx-auto " src="./images/aboutUs.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide rounded-xl overflow-hidden">
+                            <p class="hidden">هوشمند سازی : شهربازی تمدن اصفهان , پارک آبشار , شهربازی گز و برخوار و شهر
+                                بازی سپاهان شهر و بوستان مادر در شاهین شهر .</p>
+                            <img class=" w-full mx-auto " src="./images/aboutUs.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="sliderTextBox"
+                class=" font-dana-md text-center text-lg text-gray-800 mt-5 sm:mt-10 bg-blue/30 rounded-2xl p-5 w-fit mx-auto">
+            </p>
+        </section>
+
+
+
+        <footer id="footer" class="relative z-[1] bg-gray-800 mt-20 ">
+
+            <div id="contactSection" class="container py-10 sm:py-20">
+                <div class="lg:flex items-start gap-20 ">
+                    <section>
+                        <h3 class="text-gray-50 font-py-md text-2xl text-center">جهت ارتباط لطفا فرم زیر را ارسال کنید
+                        </h3>
+                        <div class="mb-10 lg:mb-0 mt-10 ">
+                            <!-- form -->
+                            <div class="form-container mx-auto ">
+                                <form class="form">
+                                    <div class="flex-col gap-y-5 sm:flex-row flex items-center gap-x-2">
+
+                                        <div class="form-group w-full sm:w-auto">
+                                            <label for="email" class="font-dana-md text-gray-300">آدرس ایمیل</label>
+                                            <input class="w-full sm:w-auto block" type="text" name="email">
+                                        </div>
+                                        <div class="form-group w-full sm:w-auto">
+                                            <label for="email" class="font-dana-md text-gray-300">نام و نام
+                                                خانوادگی</label>
+                                            <input class="w-full sm:w-auto" type="text" name="name">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject" class="font-dana-md text-gray-300">مضوع</label>
+                                        <input type="text" name="subject">
+                                    </div>
+
+
+                                    <div class="form-group text-gray-50">
+                                        <label for="textarea">پیام شما مهم است, لطفا بنویسید !</label>
+                                        <textarea name="textarea" rows="10" cols="50" required="">          </textarea>
+                                    </div>
+                                    <button
+                                        class=" text-gray-50 font-dana-md font-medium form-submit-btn transition-all"
+                                        type="submit">ارسال</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3
+                            class=" flex items-center gap-x-2.5 font-py-md text-gray-50 text-2xl mx-auto lg:mx-0 mb-2 w-fit">
+                            تماس
+                            با
+                            ما
+                            <svg class="w-6 h-6">
+                                <use href="#phone"></use>
+                            </svg>
+                        </h3>
+                        <div
+                            class="font-dana-md text-center lg:text-right text-gray-100 text-lg lg:border-r space-y-4 ">
+                            <p class=" lg:mr-4">آدرس: اصفهان، خیابان چهارباغ عباسی، نبش سیدعلی خان، مجتمع تجاری شهر،
+                                طبقه
+                                دوم،
+                                واحد 28 پلاک 5/1 </p>
+                            <p class=" lg:mr-4"> تلفن: 03132240144 </p>
+                            <a class="block lg:mr-4" href="mailto:info@avatsanatco.ir">آدرس ایمیل: <span
+                                    class="hover:text-blue">info@avatsanatco.ir</span></a>
+                            <a class="block lg:mr-4" href="">آدرس اینستاگرم: <span
+                                    class="hover:text-blue">avatsanatco</span></a>
+                        </div>
+                        <div id="Social" class="flex items-center mt-10 mx-auto lg:mx-0 w-fit p-3 rounded-xl gap-x-1">
+                            <img class="w-[60px] h-[60px]" src="./images/Logo.png" alt="">
+                            <h1 class="text-gray-100 text-xl font-dana-md">آوات صنعت</h1>
+                        </div>
+                        <div>
+
+                            <div class="card flex-wrap mt-5 mx-auto lg:mx-0 text-gray-50 text-xl">
+
+
+                                <a class="socialContainer containerTwo" href="#">
+                                    <i class="fa-brands fa-square-tumblr" aria-hidden="true"></i>
+                                </a>
+                                <a class="socialContainer containerTwo" href="#">
+                                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a class="socialContainer containerTwo" href="#">
+                                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="socialContainer containerThree" href="#">
+                                    <i class=" fa-brands fa-dribbble" aria-hidden="true"></i>
+                                </a>
+                                <a class="socialContainer containerThree" href="#">
+                                    <i class="fa-brands fa-twitter" aria-hidden="true"></i> </a>
+                                <a class="socialContainer containerThree" href="#">
+                                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+            <!-- Last section -->
+            <section class="w-full bg-blue">
+                <section
+                    class="container  flex flex-col sm:flex-row justify-between items-center py-5 text-gray-200 font-py-md">
+                    <a href="#Alireza's website link">Devloped by Alireza</a>
+                    <p>© 2022 Avat sanat.</p>
+                </section>
+            </section>
+        </footer>
+    </main>
+</body>
+
+
+
+<script src="./js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- Config... -->
+<script>
+    // Swiper Config ----------------------------------------------------------------------------
+    // slider(.className   ,effectName    ,.prevtBottonID   ,.nexttBottonID   ,spaceBetween  ,autoPlay )
+    function slider(className, Eff, prevBtn, nextBtn, space, isPlay) {
+        const AutoValue = isPlay ? { autoplay: { delay: 5000, disableOnInteraction: false, } } : null;
+        var swiper = new Swiper(className, {
+            spaceBetween: space,
+            effect: Eff,
+            ...AutoValue,
+            loop: true,
+            navigation: {
+                nextEl: prevBtn,
+                prevEl: nextBtn,
+            },
+
+        });
+        return swiper;
+    }
+    slider(".mySwiper", "fade", ".swiper-button-prev-costum", ".swiper-button-next-costum", 0, false)
+    slider(".mySwiper2", "slide", ".swiper-button-prev-costum2", ".swiper-button-next-costum2", 0, true)
+    // scroollReveal Config ----------------------------------------------------------------------------
+    function animate(className, seconds, position, space, isreset) {
+        ScrollReveal().reveal(className, {
+            duration: seconds,
+            origin: position,
+            distance: space,
+            opacity: 0,
+            reset: isreset,
+        });
+    }
+    animate(".scrollEffBottom", 1000, "bottom", "50px",)
+    animate(".scrollEffBottomByDelay1", 1300, "bottom", "50px",)
+    animate(".scrollEffBottomByDelay2", 1400, "bottom", "50px",)
+    animate(".scrollEffBottomByDelay3", 1500, "bottom", "50px",)
+</script>
+
+</html>

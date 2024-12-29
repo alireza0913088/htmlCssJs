@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components{
+    .backgroundxyCenter{
+        background-position: center center;
+    }
+    .bg-blure{
+        @apply backdrop-blur-lg bg-white/20
+    }
+    .animateUp{
+        animation: Up ease forwards 1s;
+    }
+    .animateUpDelay{
+        animation: Up ease forwards 1.5s;
+
+    }
+    @keyframes Up {
+        from{transform: translateY(50px);opacity: 0;}
+        to{transform: translateY(0px);opacity: 1;}
+    }
+    
+    .simpleHover{
+        @apply hover:text-gray-200 transition-all
+    }
+    .openedMenu{
+        @apply translate-x-0 opacity-100
+    }
+    .closedMenu{
+        @apply translate-x-[100%] opacity-0
+    }
+    .showed{
+        animation: Showed 150ms ease forwards ;
+    }
+    .hiddened{
+        animation: Hiddened 150ms ease forwards ;
+    }
+    
+    .title{
+        @apply text-center mt-10 sm:mt-20 text-2xl sm:text-3xl text-gray-700 font-py-md;
+    }
+    .contentHeader{
+        @apply bg-black/70 backdrop-blur-sm w-full h-full absolute inset-0 z-[3] flex justify-center flex-col sm:flex-row sm:justify-between items-center sm:px-5 
+    }
+    .arrowButton{
+        @apply hidden sm:flex group-hover:opacity-100 opacity-0 text-white border-2 border-white rounded-full p-1.5  justify-center items-center bg-blure transition-all hidden sm:flex group-hover:opacity-100 opacity-0 text-white border-2 border-white rounded-full p-1.5  justify-center items-center bg-blure transition-all  sm:m-0
+    }
+    .noMargin{
+        margin: 0 0 0 0 !important;
+    }
+    .noPadding{
+        padding: 0 0 0 0 !important;
+    }
+    .bgImage{
+        background-image: url(.././images/contact-bg.jpg);
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    /*Form style  */
+    /* From Uiverse.io by gharsh11032000 */ 
+.form-container {
+    max-width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#201cff, #028fcc) border-box;
+                backdrop-filter: blur("20px");
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  
+  .form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
+  
+  .form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+  }
+  
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #028fcc;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #028fcc;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+   
+    
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    background-color: #ffffff26;
+    border-color: #fff;
+  }
+  
+  /* From Uiverse.io by elisapi */ 
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color:#00acee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
+  /* instagram*/
+  
+  .containerTwo:hover {
+    background-color: #0080b3;
+    transition-duration: 0.3s;
+    transform: scale(1.050);
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0080b3;
+    transition-duration: 0.3s;
+    transform: scale(1.050);
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #0080b3;
+    transition-duration: 0.3s;
+    transform: scale(1.050);
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+  }
+  
+  
+  
+ 
+  
+  
+  
+ 
+  
+  
+  
+    
+}
+@layer base{
+    
+    @font-face {
+        font-family:"dana-sm" ;
+        src: url(../fonts/DanaFaNum-Regular.woff2);
+    }
+    @font-face {
+        font-family:"dana-md" ;
+        src: url(../fonts/DanaFaNum-Medium.woff2);
+    }
+    @font-face {
+        font-family:"dana-bold" ;
+        src: url(../fonts/DanaFaNum-DemiBold.woff2);
+    }
+    @font-face {
+        font-family:"py-sm" ;
+        src: url(../fonts/PeydaWeb-light.woff);
+    }
+    @font-face {
+        font-family:"py-md" ;
+        src: url(../fonts/PeydaWeb-Medium.woff);
+    }
+    @font-face {
+        font-family:"py-bold" ;
+        src: url(../fonts/PeydaWeb-Bold.woff);
+    }
+    
+}
